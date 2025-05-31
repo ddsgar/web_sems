@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>«Зеленый обмен»</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="background-image">
+    <!-- Контейнер для уведомлений -->
+    <div id="notification-container" class="notification-container"></div>
+
+    <!-- Контейнер для информации о пользователе -->
+    <div id="user-info-container" class="user-info-container hidden">
+        <div class="user-info">
+            <span id="username-display">Пользователь: Гость</span>
+            <button id="logout-btn">Выйти</button>
+        </div>
+    </div>
+
+    <!-- Форма регистрации в левом верхнем углу -->
+    <div id="auth-container" class="auth-container">
+        <div class="auth-form">
+            <h3>Вход/Регистрация</h3>
+            <form id="auth-form">
+                <input type="text" id="username" placeholder="Имя пользователя" required>
+                <input type="password" id="password" placeholder="Пароль" required>
+                <button type="submit" id="login-btn">Войти</button>
+                <button type="button" id="register-btn">Зарегистрироваться</button>
+            </form>
+            <div id="auth-message" class="hidden"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <header>
+            <h1>«Зеленый обмен»</h1>
+            <p class="subtitle">Обменивайте растения и находите новые зеленые друзей!</p>
+        </header>
+
+        <section class="search-section">
+            <input type="text" id="search-input" placeholder="Поиск растений...">
+            <button id="search-button">Поиск</button>
+        </section>
+
+        <section class="plant-section">
+            <h2>Популярные растения</h2>
+            <div id="plant-list" class="plant-grid">
+                <!-- Карточки растений будут загружаться здесь -->
+            </div>
+        </section>
+
+        <section class="action-section">
+            <button id="show-add-plant-form" class="cta-button">Добавить растение</button>
+            <a href="how-it-works.html" class="secondary-button">Как это работает?</a>
+        </section>
+
+        <!-- Форма добавления растения (скрыта по умолчанию) -->
+        <div id="add-plant-form-container" class="hidden">
+            <h2>Добавь новое растение в список</h2>
+            <form id="plant-form">
+                <input type="text" id="plant-name" placeholder="Название" required>
+                <input type="text" id="plant-description" placeholder="Тип" required>
+                <input type="text" id="plant-city" placeholder="Город" required>
+                <input type="text" id="plant-contact" placeholder="Контакты" required>
+                <button type="submit">Добавить Растение</button>
+                <button type="button" id="cancel-add-plant">Отмена</button>
+            </form>
+            <div id="success-message" class="hidden"></div>
+        </div>
+    </div>
+
+    <div id="chat-widget" class="chat-widget hidden">
+        <div class="chat-header">
+            Чат поддержки
+            <span class="close-chat">×</span>
+        </div>
+        <div class="chat-body" id="chat-messages">
+            <!-- Сообщения чата будут здесь -->
+        </div>
+        <div class="chat-suggestions" id="quick-replies">
+            <div class="suggestion">Как добавить растение?</div>
+            <div class="suggestion">Как работает обмен?</div>
+            <div class="suggestion">Правила сообщества</div>
+        </div>
+        <div class="chat-input-container">
+            <input type="text" id="user-input" placeholder="Напишите сообщение...">
+            <button id="send-button">Отправить</button>
+        </div>
+    </div>
+
+    <button id="chat-toggle" class="chat-toggle">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Чат">
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

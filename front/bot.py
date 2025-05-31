@@ -6,7 +6,7 @@ from threading import Lock
 
 app = Flask(__name__)
 CORS(app)
-API_TOKEN = '6848579773:AAE4_d_a_6CgCTd4UR3fP1Zt2WlRgfb31yk'
+API_TOKEN = '8005990970:AAG6jwazOfdzo7HVQ0jupJxD80DmZH-byTg'
 bot = telebot.TeleBot(API_TOKEN)
 
 
